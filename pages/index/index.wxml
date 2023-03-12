@@ -9,9 +9,9 @@
 <view class="tag">
     <view class="tag-title">标签<text>（至少选择一个标签）</text></view>
     <view class="tag-list">
-      <view bindtap="oncheckedChange" data-index="{{0}}" data-num="{{0}}"  class="{{tools.includes(tagValueList,0) ? 'tag-active tag-active-0' : ''}}'tag-checked'">#新产品</view>
-      <view bindtap="oncheckedChange" data-index="{{1}}" data-num="{{0}}" class="{{tools.includes(tagValueList,1) ? 'tag-active tag-active-1' : ''}}'tag-checked'">#新趋势</view>
-      <view bindtap="oncheckedChange" data-index="{{2}}" data-num="{{0}}" class="{{tools.includes(tagValueList,2) ? 'tag-active tag-active-2' : ''}}'tag-checked'">#新想法</view>
+      <view bindtap="oncheckedChange" data-index="{{0}}" data-num="{{0}}"  class="{{tools.includes(tagValueList,0) ? 'tag-active tag-active-0' : ''}}'tag-checked'">#标签1</view>
+      <view bindtap="oncheckedChange" data-index="{{1}}" data-num="{{0}}" class="{{tools.includes(tagValueList,1) ? 'tag-active tag-active-1' : ''}}'tag-checked'">#标签2</view>
+      <view bindtap="oncheckedChange" data-index="{{2}}" data-num="{{0}}" class="{{tools.includes(tagValueList,2) ? 'tag-active tag-active-2' : ''}}'tag-checked'">#标签3</view>
      <view class="tag-checked" wx:if="{{list.length}}" wx:for="{{list}}" wx:key="index">
         <view class="tag-field" wx:if="{{!item.show}}" style="{{'width:'+item.winWidth+'px;'}}">
           <view class="field">
