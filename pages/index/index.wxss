@@ -1,0 +1,48 @@
+.tag {
+  padding: 20rpx 40rpx 20rpx 60rpx;
+}
+.tag-list {
+  vertical-align: middle;
+  padding: 20rpx 0;
+}
+
+.tag-checked {
+  height: 46rpx;
+  font-size: 32rpx;
+  color: #303335;
+  line-height: 46rpx;
+  background: #CDCDCD;
+  border-radius: 30rpx;
+  text-align: center;
+  margin-right: 14rpx;
+  display: inline-block;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+  vertical-align: top;
+}
+.van-cell {
+  padding: 0 !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.margin-cheaked {
+  display: inline-block;
+}
+.tag-active {
+  color: #F7F7F7;
+}
+.tag-active-0 {
+  background: #981CEB;
+}
+.tag-active-1 {
+  background: #10C17D;
+}
+.tag-active-2 {
+  background: #F18303;
+}
+.input-tag {
+  background: none;
+  z-index:11;
+}
+.tag-field {
+  width: 116rpx;
+}

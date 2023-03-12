@@ -1,0 +1,43 @@
+<wxs module="tools">
+  var includes = function (array, searchElement) {
+    return array.indexOf(searchElement) !== -1
+  }
+  module.exports = {
+    includes:includes
+  }
+</wxs>
+<view class="tag">
+    <view class="tag-title">标签<text>（至少选择一个标签）</text></view>
+    <view class="tag-list">
+      <view bindtap="oncheckedChange" data-index="{{0}}" data-num="{{0}}"  class="{{tools.includes(tagValueList,0) ? 'tag-active tag-active-0' : ''}}'tag-checked'">#新产品</view>
+      <view bindtap="oncheckedChange" data-index="{{1}}" data-num="{{0}}" class="{{tools.includes(tagValueList,1) ? 'tag-active tag-active-1' : ''}}'tag-checked'">#新趋势</view>
+      <view bindtap="oncheckedChange" data-index="{{2}}" data-num="{{0}}" class="{{tools.includes(tagValueList,2) ? 'tag-active tag-active-2' : ''}}'tag-checked'">#新想法</view>
+     <view class="tag-checked" wx:if="{{list.length}}" wx:for="{{list}}" wx:key="index">
+        <view class="tag-field" wx:if="{{!item.show}}" style="{{'width:'+item.winWidth+'px;'}}">
+          <view class="field">
+              <van-field
+                value="{{ item.value }}"
+                placeholder="#..."
+                placeholder-style="color:#000000;"
+                border="{{ false }}"
+                bind:blur="onAddTagBlur"
+                bind:focus="onAddTagFocus"
+                bind:change="onAddTagChange"
+                input-class="input-tag"
+                auto-focus="true" 
+                data-index="{{index}}"
+              />
+          </view>
+        </view>
+        <text
+          id="{{'t_'+index}}"
+          wx:else 
+          bind:tap="onAddTag" 
+          data-index="{{index}}" 
+          data-value="{{item.value}}" 
+          style="min-width:116rpx;display:block;">{{item.value}}</text>
+      </view>
+
+      <view class="tag-checked" wx:if="{{list.length < 2}}" bindtap="oncheckedChange" data-index="{{3}}">+</view>
+    </view>
+  </view>
